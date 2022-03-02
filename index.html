@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTC Price converter</title>
+
+    <style>
+        .container {
+            margin: 25px auto;
+            padding: 25px 0;
+            border: 1px solid #323232;
+            border-radius: 0.5em;
+            box-shadow: 0 0 20px 0 #323232;
+            width: 40%;
+            text-align: center;
+        }
+        .display {
+            margin: 0 auto;
+            width: 50%;
+            border: 1px solid #323232;
+            border-radius: 0.5em;
+        
+            font-size: 21px;
+        }
+        .inputs {
+            display: flex;
+            margin: 25px auto;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+
+        <h1>BTC Price converter</h1>
+
+        <h3>1 BTC = $<span id="oneBtcPrice">440502</span></h3>
+
+        <div class="display">
+
+            <span id="currency">USD</span>
+            <span id="amount">123</span>
+
+        </div>
+
+
+        <div class="inputs">
+            <input id="usd" type="number" placeholder="Enter USD" step="0.01">
+        </div>
+
+        <select name="usdOrBtc" id="usdOrBtc">
+            <option value="usdToBtc">USD to BTC</option>
+            <option value="btcToUsd">BTC to USD</option>
+        </select>
+        
+        <button onclick="convert()">Convert</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
